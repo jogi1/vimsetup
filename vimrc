@@ -1,12 +1,14 @@
 set nocompatible
+set nocp
 
-filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+call pathogen#infect()
 
 "automatic syntax detection and highlighting
-filetype plugin indent on
 syntax on
+
+filetype plugin indent on
+call pathogen#infect()
+
 
 "background
 set background=dark

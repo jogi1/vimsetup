@@ -10,3 +10,6 @@
 [submodule "bundle/nerdcommentor"]
 	path = bundle/nerdcommentor
 	url = https://github.com/scrooloose/nerdcommenter
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab

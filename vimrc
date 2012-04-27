@@ -22,9 +22,11 @@ set spell
 
 "do backups
 set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
 
 "color stuff
-colorscheme vitamin
+colorscheme skittles_berry
 
 " ui
 " font

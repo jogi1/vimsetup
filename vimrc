@@ -26,7 +26,7 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
 "color stuff
-colorscheme skittles_berry
+colorscheme solarized
 
 " ui
 " font

@@ -10,8 +10,6 @@ filetype plugin indent on
 call pathogen#infect()
 
 
-"background
-set background=dark
 
 set shortmess+=filmnrxoOtT
 
@@ -25,8 +23,10 @@ set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
+"background
+set background=dark
 "color stuff
-colorscheme skittles_berry
+colorscheme solarized
 
 " ui
 " font

@@ -30,7 +30,9 @@ colorscheme solarized
 
 " ui
 " font
-set gfn=BitStream\ Vera\ Sans\Mono\ 14
+set gfn=BitStream\ Vera\ Sans\ Mono\ 14
+set guifont=Bitstream\ Vera\ Sans\ Mono:h14
+
 set tabpagemax=15
 set showmode
 set cursorline
@@ -134,12 +136,14 @@ nnoremap <A-k> :bn<CR>
 nnoremap \t :FufFile<CR>
 nnoremap \b :FufFile<CR>
 
+noremap <F1> :NERDTreeToggle<CR>
+
 nnoremap ; :
 
 map <up> <nop>
 map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+map <left> :bp<CR>
+map <right> :bn<CR>
 
 " set guioptions-=m
 " set guioptions-=T

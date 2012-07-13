@@ -22,3 +22,6 @@
 [submodule "bundle/buffergator"]
 	path = bundle/buffergator
 	url = git://github.com/jeetsukumaran/vim-buffergator.git
+[submodule "bundle/sparkup"]
+	path = bundle/sparkup
+	url = git://github.com/rstacruz/sparkup.git

@@ -30,8 +30,8 @@ colorscheme solarized
 
 " ui
 " font
-set gfn=BitStream\ Vera\ Sans\ Mono\ 14
-set guifont=Bitstream\ Vera\ Sans\ Mono:h14
+set gfn=Source\ Code\ Pro\ 10
+set guifont=Source\ Code\ Pro\ 10
 
 set tabpagemax=15
 set showmode

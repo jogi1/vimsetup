@@ -62,7 +62,6 @@ set relativenumber
 
 "searching / matching
 set hlsearch	"highlight search terms
-set ignorecase	"case insensitive matching
 set smartcase	"smart casesensitive searching
 set incsearch	"search as typing
 
@@ -167,3 +166,12 @@ nmap <C-Down> ddp
 vmap <C-Up> xkP`[V`]
 vmap <C-Down> xp`[V`]
 
+function! UmlautFix ()
+	:%s/\%u00c4/\&Auml;/
+	:%s/\%u00e4/\&auml;/
+	:%s/\%u00dc/\&Uuml;/
+	:%s/\%u00fc/\&uuml;/
+	:%s/\%u00d6/\&Ouml;/
+	:%s/\%u00f6/\&ouml;/
+	:%s/\%u00df/\&szlig;/
+endfunction

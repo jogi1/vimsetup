@@ -26,12 +26,12 @@ set directory=~/.vim/backup
 "background
 set background=dark
 "color stuff
-colorscheme solarized
+colorscheme jogi
 
 " ui
 " font
-set gfn=Source\ Code\ Pro\ 10
-set guifont=Source\ Code\ Pro\ 10
+set gfn=Source\ Code\ Pro\ 11
+set guifont=Source\ Code\ Pro\ 11
 
 set tabpagemax=15
 set showmode
@@ -144,9 +144,9 @@ map <down> <nop>
 map <left> :bp<CR>
 map <right> :bn<CR>
 
-" set guioptions-=m
-" set guioptions-=T
-" set guioptions-=r
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
 
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>
@@ -174,4 +174,6 @@ function! UmlautFix ()
 	:%s/\%u00d6/\&Ouml;/
 	:%s/\%u00f6/\&ouml;/
 	:%s/\%u00df/\&szlig;/
+	:%s/\%u201e/\&bdquo;/
+	:%s/\%u201c/\&ldquo;/
 endfunction

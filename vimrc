@@ -10,6 +10,7 @@ filetype plugin indent on
 call pathogen#infect()
 
 
+set autochdir
 
 set shortmess+=filmnrxoOtT
 
@@ -49,11 +50,11 @@ if has('statusline')
 	" Broken down into easily includeable segments
 	set statusline=%<%f\    " Filename
 	set statusline+=%w%h%m%r " Options
-	" set statusline+=%{fugitive#statusline()} "  Git Hotness
+	set statusline+=%{fugitive#statusline()} "  Git Hotness
 	set statusline+=\ [%{&ff}/%Y]            " filetype
 	set statusline+=\ [%{getcwd()}]          " current dir
 	set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
-	"set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
+	set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
 endif
 
 set backspace=indent,eol,start "backspace
@@ -177,3 +178,9 @@ function! UmlautFix ()
 	:%s/\%u201e/\&bdquo;/
 	:%s/\%u201c/\&ldquo;/
 endfunction
+
+" those come in handy while you have to work with the Yii framework
+nmap <leader>yt iecho Yii::app('translation', '');<ESC>bi
+nmap <leader>ytp i<?php echo Yii::app('translation', '');?><ESC>bi
+nmap <leader>ytw diwiecho Yii::app('translation', '');<ESC>bp
+nmap <leader>ytwp diwi<?php echo Yii::app('translation', '');?><ESC>bp

@@ -28,6 +28,7 @@ set directory=~/.vim/backup
 "background
 set background=dark
 "color stuff
+set t_Co=256
 colorscheme jogi
 
 " ui
@@ -165,6 +166,8 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 
+set noswapfile
+
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
@@ -242,7 +245,10 @@ function! UmlautFix ()
 endfunction
 
 " those come in handy while you have to work with the Yii framework
-nmap <leader>yt iecho Yii::app('translation', '');<ESC>bi
-nmap <leader>ytp i<?php echo Yii::app('translation', '');?><ESC>bi
-nmap <leader>ytw diwiecho Yii::app('translation', '');<ESC>bp
-nmap <leader>ytwp diwi<?php echo Yii::app('translation', '');?><ESC>bp
+nmap <leader>yt iecho Yii::t('translation', '');<ESC>bi
+nmap <leader>ytp i<?php echo Yii::t('translation', '');?><ESC>bi
+nmap <leader>ytw diwiecho Yii::t('translation', '');<ESC>bp
+nmap <leader>ytwp diwi<?php echo Yii::t('translation', '');?><ESC>bp
+
+
+inoremap <C-Space> <C-x><C-o>

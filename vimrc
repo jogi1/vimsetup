@@ -33,8 +33,8 @@ colorscheme jogi
 
 " ui
 " font
-set gfn=Source\ Code\ Pro\ 11
-set guifont=Source\ Code\ Pro\ 11
+set gfn=Source\ Code\ Pro\ 10
+set guifont=Source\ Code\ Pro\ 10
 
 set tabpagemax=15
 set showmode

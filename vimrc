@@ -31,8 +31,14 @@ colorscheme jogi
 
 " ui
 " font
-set gfn=Source\ Code\ Pro\ 10
-set guifont=Source\ Code\ Pro\ 10
+"set gfn=Source\ Code\ Pro\ 10
+"set guifont=Source\ Code\ Pro\ 10
+"Source Code Pro for Powerline Ultra-Light 10
+set gfn=Source\ Code\ Pro\ for\ Powerline\ Regular\ 10
+set guifont=Source\ Code\ Pro\ for\ Powerline\ Regular\ 10
+
+" enable powerline font
+let g:airline_powerline_fonts = 1
 
 set tabpagemax=15
 set showmode

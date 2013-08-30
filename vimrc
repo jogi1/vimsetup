@@ -16,7 +16,7 @@ set shortmess+=filmnrxoOtT
 set viewoptions=folds,options,cursor,unix,slash
 set virtualedit=onemore
 set history=1000
-set spell
+set nospell
 
 "do backups
 set backup
@@ -261,3 +261,6 @@ nmap <leader>ytwp diwi<?php echo Yii::t('translation', '');?><ESC>bp
 inoremap <C-Space> <C-x><C-o>
 
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+map <leader>s0 :setlocal spell! spelllang=en_us<CR>
+map <leader>s9 :setlocal spell! spelllang=de_de<CR>

@@ -253,4 +253,9 @@ nmap <leader>ytw diwiecho Yii::t('translation', '');<ESC>bp
 nmap <leader>ytwp diwi<?php echo Yii::t('translation', '');?><ESC>bp
 
 
+nmap <leader>yu iYii::app()->user
+nmap <leader>yua iYii::app()->user->isAdmin
+
+
+
 inoremap <C-Space> <C-x><C-o>

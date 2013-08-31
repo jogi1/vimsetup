@@ -1,15 +1,13 @@
-set nocompatible
-set nocp
-
-
+" setup pathogen
+filetype off
 call pathogen#infect()
+filetype plugin indent on
+
+" no backward compatability
+set nocompatible
 
 "automatic syntax detection and highlighting
 syntax on
-
-filetype plugin indent on
-call pathogen#infect()
-
 
 set autochdir
 
@@ -18,7 +16,7 @@ set shortmess+=filmnrxoOtT
 set viewoptions=folds,options,cursor,unix,slash
 set virtualedit=onemore
 set history=1000
-set spell
+set nospell
 
 "do backups
 set backup
@@ -33,8 +31,14 @@ colorscheme jogi
 
 " ui
 " font
-set gfn=Source\ Code\ Pro\ 11
-set guifont=Source\ Code\ Pro\ 11
+"set gfn=Source\ Code\ Pro\ 10
+"set guifont=Source\ Code\ Pro\ 10
+"Source Code Pro for Powerline Ultra-Light 10
+set gfn=Source\ Code\ Pro\ for\ Powerline\ Regular\ 10
+set guifont=Source\ Code\ Pro\ for\ Powerline\ Regular\ 10
+
+" enable powerline font
+let g:airline_powerline_fonts = 1
 
 set tabpagemax=15
 set showmode
@@ -97,7 +101,9 @@ set foldenable
 
 "highlight certain chars
 set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
+"set listchars=tab:>.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
+set listchars=tab:▸.,trail:▫
+
 
 "formating
 set tabstop=4
@@ -223,16 +229,16 @@ endfunction
 function FUCKTHISSHIT()
 endfunction
 
-
+nmap <leader>l :Align
 
 nmap <M-i> :FufBuffer<CR>
 
 " Bubble single lines
-nmap <C-Up> ddkP
-nmap <C-Down> ddp
+nmap <C-k> ddkP
+nmap <C-j> ddp
 " Bubble multiple lines
-vmap <C-Up> xkP`[V`]
-vmap <C-Down> xp`[V`]
+vmap <C-k> xkP`[V`]
+vmap <C-j> xp`[V`]
 
 function! UmlautFix ()
 	:%s/\%u00c4/\&Auml;/
@@ -247,15 +253,19 @@ function! UmlautFix ()
 endfunction
 
 " those come in handy while you have to work with the Yii framework
-nmap <leader>yt iecho Yii::t('translation', '');<ESC>bi
-nmap <leader>ytp i<?php echo Yii::t('translation', '');?><ESC>bi
+nmap <leader>yt aecho Yii::t('translation', '');<ESC>bi
+nmap <leader>ytp a<?php echo Yii::t('translation', '');?><ESC>bi
 nmap <leader>ytw diwiecho Yii::t('translation', '');<ESC>bp
 nmap <leader>ytwp diwi<?php echo Yii::t('translation', '');?><ESC>bp
-
 
 nmap <leader>yu iYii::app()->user
 nmap <leader>yua iYii::app()->user->isAdmin
 
-
-
+" omni completion
 inoremap <C-Space> <C-x><C-o>
+
+map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+" toggle spell checking with either en or us dictionaries
+map <leader>s0 :setlocal spell! spelllang=en_us<CR>
+map <leader>s9 :setlocal spell! spelllang=de_de<CR>

@@ -26,8 +26,12 @@ set directory=~/.vim/backup
 "background
 set background=dark
 "color stuff
-set t_Co=256
-colorscheme jogi
+if has('gui_running')
+	colorscheme solarized
+else
+	colorscheme jogi
+	set t_Co=256
+endif
 
 " ui
 " font

@@ -262,9 +262,14 @@ nmap <leader>ytp a<?php echo Yii::t('translation', '');?><ESC>bi
 nmap <leader>ytw diwiecho Yii::t('translation', '');<ESC>bp
 nmap <leader>ytwp diwi<?php echo Yii::t('translation', '');?><ESC>bp
 
+nmap <leader>yu iYii::app()->user
+nmap <leader>yua iYii::app()->user->isAdmin
+
+" omni completion
 inoremap <C-Space> <C-x><C-o>
 
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
+" toggle spell checking with either en or us dictionaries
 map <leader>s0 :setlocal spell! spelllang=en_us<CR>
 map <leader>s9 :setlocal spell! spelllang=de_de<CR>

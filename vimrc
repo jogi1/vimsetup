@@ -11,6 +11,8 @@ syntax on
 
 set autochdir
 
+set wrap
+
 set shortmess+=filmnrxoOtT
 
 set viewoptions=folds,options,cursor,unix,slash

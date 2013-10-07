@@ -11,7 +11,7 @@ syntax on
 
 set autochdir
 
-set wrap
+set linebreak
 
 set shortmess+=filmnrxoOtT
 
@@ -275,3 +275,18 @@ map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimr
 " toggle spell checking with either en or us dictionaries
 map <leader>s0 :setlocal spell! spelllang=en_us<CR>
 map <leader>s9 :setlocal spell! spelllang=de_de<CR>
+
+"quick pairs
+imap <leader>' ''<ESC>i
+imap <leader>" ""<ESC>i
+imap <leader>( ()<ESC>i
+imap <leader>[ []<ESC>i
+imap <leader>{ {}<ESC>i
+
+" gO to create a new line below cursor in normal mode
+nmap g<C-O> o<ESC>k
+nmap gO O<ESC>j
+
+" upper or lowercase the current word
+nmap g^ gUiW
+nmap gv guiW

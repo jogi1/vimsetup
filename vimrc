@@ -72,8 +72,8 @@ set backspace=indent,eol,start "backspace
 set linespace=0
 
 " man so fucking slow... wtf?
-" set relativenumber
-set nu
+set relativenumber
+set number
 
 function! g:ToggleNuMode()
 	if(&rnu == 1)

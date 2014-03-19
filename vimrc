@@ -6,12 +6,12 @@ filetype plugin indent on
 " no backward compatability
 set nocompatible
 
+set lazyredraw
+
 "automatic syntax detection and highlighting
 syntax on
 
 set autochdir
-
-set linebreak
 
 set shortmess+=filmnrxoOtT
 
@@ -133,11 +133,12 @@ set undolevels=1000
 
 "key mappings
 let mapleader = ','
-nnoremap / /\v
-vnoremap / /\v
+nnoremap / /\v\c
+vnoremap / /\v\c
 nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
+nnoremap - :Switch<cr>
 
 "code folding
 nmap <leader>f0 :set foldlevel=0<CR>
@@ -173,8 +174,8 @@ nnoremap ; :
 
 map <up> <nop>
 map <down> <nop>
-map <left> :bp<CR>
-map <right> :bn<CR>
+map <left> <nop>
+map <right> <nop>
 
 set guioptions-=m
 set guioptions-=T
@@ -290,3 +291,26 @@ nmap gO O<ESC>j
 " upper or lowercase the current word
 nmap g^ gUiW
 nmap gv guiW
+
+
+set wrap
+set linebreak
+set nolist
+
+" use 2 spaces for tabs
+set tabstop=2 softtabstop=2 shiftwidth=2
+set expandtab
+
+autocmd BufReadPost * :GuessIndent
+
+" " display indentation guides
+set list listchars=tab:❘-,trail:·,extends:»,precedes:«,nbsp:×
+"
+" " convert spaces to tabs when reading file
+" autocmd! bufreadpost * set noexpandtab | retab! 4
+"
+" " convert tabs to spaces before writing file
+" autocmd! bufwritepre * set expandtab | retab! 4
+"
+" " convert spaces to tabs after writing file (to show guides again)
+" autocmd! bufwritepost * set noexpandtab | retab! 4

@@ -61,3 +61,9 @@
 [submodule "bundle/guessindent"]
 	path = bundle/guessindent
 	url = https://github.com/ogier/guessindent.git
+[submodule "bundle/unite"]
+	path = bundle/unite
+	url = https://github.com/Shougo/unite.vim.git
+[submodule "bundle/multiple-cursors"]
+	path = bundle/multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git

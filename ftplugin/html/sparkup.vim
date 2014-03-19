@@ -23,7 +23,7 @@ if !exists('g:sparkupExecuteMapping')
 endif
 
 if !exists('g:sparkupNextMapping')
-  let g:sparkupNextMapping = '<c-n>'
+  let g:sparkupNextMapping = '<c-d>'
 endif
 
 exec 'nmap <buffer> ' . g:sparkupExecuteMapping . ' :call <SID>Sparkup()<cr>'

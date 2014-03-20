@@ -3,6 +3,10 @@ filetype off
 call pathogen#infect()
 filetype plugin indent on
 
+if !exists("g:snips_author_email")
+  let g:snips_author_email= "jogihoogi@gmail.com"
+endif
+
 " no backward compatability
 set nocompatible
 
@@ -290,11 +294,11 @@ map <leader>s0 :setlocal spell! spelllang=en_us<CR>
 map <leader>s9 :setlocal spell! spelllang=de_de<CR>
 
 "quick pairs
-imap <leader>' ''<ESC>i
-imap <leader>" ""<ESC>i
-imap <leader>( ()<ESC>i
-imap <leader>[ []<ESC>i
-imap <leader>{ {}<ESC>i
+imap <leader>' ''<C-o>h
+imap <leader>" ""<C-o>h
+imap <leader>( ()<C-o>h
+imap <leader>[ []<C-o>h
+imap <leader>{ {}<C-o>h
 
 " gO to create a new line below cursor in normal mode
 nmap g<C-O> o<ESC>k
@@ -316,7 +320,7 @@ set expandtab
 autocmd BufReadPost * :GuessIndent
 
 " " display indentation guides
-set list listchars=tab:❘-,trail:·,extends:»,precedes:«,nbsp:×
+" set list listchars=tab:❘-,trail:·,extends:»,precedes:«,nbsp:×
 "
 " " convert spaces to tabs when reading file
 " autocmd! bufreadpost * set noexpandtab | retab! 4

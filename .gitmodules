@@ -88,3 +88,6 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets
+[submodule "bundle/vim-gotham"]
+	path = bundle/vim-gotham
+	url = https://github.com/whatyouhide/vim-gotham.git

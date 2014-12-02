@@ -33,7 +33,7 @@ set directory=~/.vim/backup
 set background=dark
 "color stuff
 if has('gui_running')
-	colorscheme solarized
+	colorscheme zenburn
 else
 	colorscheme jogi
 	set t_Co=256
@@ -44,8 +44,8 @@ endif
 "set gfn=Source\ Code\ Pro\ 10
 "set guifont=Source\ Code\ Pro\ 10
 "Source Code Pro for Powerline Ultra-Light 10
-set gfn=Source\ Code\ Pro\ for\ Powerline\ Regular\ 10
-set guifont=Source\ Code\ Pro\ for\ Powerline\ Regular\ 10
+set gfn=Source\ Code\ Pro\ for\ Powerline\ Regular\ 9
+set guifont=Source\ Code\ Pro\ for\ Powerline\ Regular\ 9
 
 " enable powerline font
 let g:airline_powerline_fonts = 1
@@ -112,13 +112,10 @@ set foldenable
 "highlight certain chars
 set list
 "set listchars=tab:>.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
-set listchars=tab:▸.,trail:▫
+set listchars=tab:>.,trail:▫
 
 
 "formating
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
 set autoindent
 set nowrap
 
@@ -184,7 +181,8 @@ nnoremap <A-k> :bn<CR>
 nnoremap \t :FufFile<CR>
 nnoremap \b :FufFile<CR>
 
-noremap <F1> :NERDTreeToggle<CR>
+nnoremap \e :NERDTreeToggle<CR>
+
 
 nnoremap ; :
 
@@ -284,6 +282,10 @@ nmap <leader>ytwp diwi<?php echo Yii::t('translation', '');?><ESC>bp
 nmap <leader>yu iYii::app()->user
 nmap <leader>yua iYii::app()->user->isAdmin
 
+" angular translate bindings
+nmap <leader>at a{{ '##' \| translate }}<ESC>F#a
+nmap <leader>atp a{{ '##Placeholder' \| translate }}<ESC>F#a
+
 " omni completion
 inoremap <C-Space> <C-x><C-o>
 
@@ -308,14 +310,16 @@ nmap gO O<ESC>j
 nmap g^ gUiW
 nmap gv guiW
 
+" map unite to c-l
+nnoremap <C-l> :Unite<cr>
+
 
 set wrap
 set linebreak
-set nolist
 
 " use 2 spaces for tabs
 set tabstop=2 softtabstop=2 shiftwidth=2
-set expandtab
+" set expandtab
 
 autocmd BufReadPost * :GuessIndent
 
@@ -330,3 +334,6 @@ autocmd BufReadPost * :GuessIndent
 "
 " " convert spaces to tabs after writing file (to show guides again)
 " autocmd! bufwritepost * set noexpandtab | retab! 4
+"
+" xiki
+" source /tmp/xiki/etc/vim/xiki.vim
